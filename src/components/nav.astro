@@ -156,18 +156,18 @@ const navItems: NavItem[] = [
     const navLinks = document.querySelectorAll("nav a[href^='#']");
     const observerOptions = { threshold: 0.6 };
 
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => link.classList.remove("active"));
-          const id = entry.target.getAttribute("id");
-          const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-          if (activeLink) {
-            activeLink.classList.add("active");
-          }
-        }
-      });
-    };
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry: IntersectionObserverEntry) => {
+    if (entry.isIntersecting) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const id = entry.target.getAttribute("id");
+      const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+  });
+};
 
     const observer = new IntersectionObserver(
       observerCallback,
