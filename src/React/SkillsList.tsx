@@ -61,9 +61,9 @@ const SkillsList = () => {
       "Prototipado de sitios web y aplicaciones móviles",
     ],
     "Gestión y Bases de Datos": [
-      "Diseño de interfaz con Figma y Canva",
-      "Investigación y optimización de la experiencia de usuario",
-      "Prototipado de sitios web y aplicaciones móviles",
+      "Gestión con Supabase",
+      "Optimización y gestión de Bases de Datos",
+      "Manejo de datos",
     ],
   };
 
